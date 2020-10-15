@@ -62,7 +62,7 @@ Notice that the type comes after the variable name.
        return (x + y);
    } // no forward declareations in go.
 
-.. info::
+.. note::
 
    no forward declareations needed and no header files.
    go attempts to reduce the amount of typing in both sensed of the word.
