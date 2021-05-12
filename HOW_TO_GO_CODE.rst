@@ -15,18 +15,18 @@ are visible to all other source files within the same package.
 A repository contains one or more modules.
 
 Module
-   Collection of related Go pacakges that are released together.
+   Collection of related Go packages that are released together.
 
 Repository
    Typically contains only one module located at the root of the repository.
 
-A file, named ``go.mod`` there declares the moudle path::
+A file, named ``go.mod`` there declares the module path::
 
    the import path prefix for all packages within the module.
 
 The module contains the packages in the directory containing its ``go.mod`` file,
 as well as subdirectories of that directory,
-up to next subdirectory containing another ``go.mode`` file(if any).
+up to next subdirectory containing another ``go.mod`` file(if any).
 
 Note that you don't need to publish your code to remote repository before you can build it.
 A module can be defined locally without belonging to a repository.
@@ -59,7 +59,7 @@ To compile and run a simple program, first choose a module path and create ``go.
    $ cat go.mod
    module example.com/user/hello
 
-   go 1.14
+   go 1.16
    $
 
 The first statement in Go source file must be package name.
@@ -101,7 +101,7 @@ If the working directory is not within the ``example.com/user/hello`` module, ``
 
 For convenience, go commands accepts pths relative to the working directory,
 and default to the package in the current working directory if no other path is given.
-So in our working directory, the following commands are all equivalent::
+So in our working directory, the following commands are all equivalent:
 
    ``$ go install example.com/user/hello``
    ``$ go install .``
